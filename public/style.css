@@ -1,0 +1,142 @@
+:root{
+    --color-success: #49d549;
+    --color-initialice: #8c8c8c;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+}
+#editor {
+    width: 45%;
+    height: 300px;
+    border: 1px solid #ccc;
+    background-color: #282a36;
+    align-items: start;
+    color: #ccc;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-family: monospace;
+    position: relative;
+    border: 2px solid var(--color-initialice);
+  }
+  #editor::after{
+    content: "Main.java";
+    color: #fff;
+    font-family: system-ui;
+    position: absolute;
+    top: -33px;
+    left: -2px;
+    background-color: #282a36;
+    padding: 5px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 2px solid var(--color-initialice);
+    border-bottom: none;
+}
+#editor,#output{
+    border-radius: 10px;
+    border-top-left-radius: 0;
+}
+.combo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+main{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+#output{
+    width: 45%;
+    height: 300px;
+    border: 1px solid #ccc;
+    background-color: #282a36;
+    align-items: start;
+    color: #ccc;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-family: monospace;
+    position: relative;
+    border: 2px solid var(--color-initialice);
+}
+#output::after{
+    content: "Main.Class";
+    color: #fff;
+    font-family: system-ui;
+    position: absolute;
+    top: -33px;
+    left: -1px;
+    background-color: #282a36;
+    padding: 5px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;  
+    border: 2px solid var(--color-initialice);
+    border-bottom: none;
+}
+
+/*  ==================
+        SCROLL
+    ================= */
+.custom-codemirror {
+    scrollbar-width: thin;  /* Grosor de la barra en Firefox */
+    scrollbar-color: #fff #d4d4d4;  /* Color de la barra y el track */
+}
+
+.custom-codemirror::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados en el thumb */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra interna para dar un efecto visual */
+}
+
+.custom-codemirror::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px; /* Bordes redondeados en el track */
+}
